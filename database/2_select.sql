@@ -1,5 +1,6 @@
 --SCOTT/TIGER로 접속
 --SCOTT/TIGER의 emp 출력
+
 conn SCOTT/TIGER   
 select * from emp ; 
 select * from dept;
@@ -166,6 +167,7 @@ where ename = 'A'
 select *
 from emp
 where ename like 'A%';
+
 --A로 끝나는 사람
 select *
 from emp
@@ -186,3 +188,117 @@ where ename like '%A__';
 select *
 from emp
 where hiredate like '81%';
+
+
+---12/24
+
+--WHERE 절에서 NULL 처리하기
+
+SELECT *
+FROM EMP; 
+
+----MGR이 NULL인 값 출력
+
+SELECT *
+FROM emp
+WHERE mgr IS NULL;
+
+---MGR이 NULL이 아닌 값 출력
+SELECT *
+FROM EMP
+WHERE MGR IS NOT NULL;
+
+--총급여가 2000이상인 값 출력
+--WHERE에는 별칭(alias)사용이 안된다
+SELECT ENAME,SAL,COMM, SAL+ NVL(COMM,0) AS "총급여"
+FROM EMP
+WHERE SAL+COMM(COMM,0) >2000;
+
+--정렬 SAL을 기준으로 오름차순 
+--오른차순(ASC)이 DEFAULT!
+SELECT ENAME,SAL,COMM, SAL+ NVL(COMM,0) AS "총급여"
+FROM EMP
+ORDER BY SAL;
+--내림차순
+SELECT ENAME,SAL,COMM, SAL+ NVL(COMM,0) AS "총급여"
+FROM EMP
+ORDER BY SAL DESC;
+
+
+----이중 가능
+SELECT ENAME,SAL,COMM, SAL+ NVL(COMM,0) AS "총급여"
+FROM EMP
+ORDER BY SAL ASC, COMM DESC;
+
+---SELECT에 없어도 가능
+SELECT ENAME,SAL, SAL+ NVL(COMM,0) AS "총급여"
+FROM EMP
+ORDER BY SAL ASC, COMM DESC;
+
+---WHERE없어도 SELECT에 없어도 가능
+SELECT ENAME,SAL, SAL+ NVL(COMM,0) AS "총급여"
+FROM EMP
+WHERE COMM IS NOT NULL
+ORDER BY SAL ASC, COMM DESC;
+
+---ALIAS문구로 정렬 가능
+SELECT ENAME,SAL, SAL+ NVL(COMM,0) AS "총급여"
+FROM EMP
+WHERE SAL+NVL(COMM,0)>=2000
+ORDER BY "총급여"
+
+---위치인덱스로도 정렬 가능
+SELECT ENAME,SAL, SAL+ NVL(COMM,0) AS "총급여"
+FROM EMP
+WHERE SAL+NVL(COMM,0)>=2000
+ORDER BY 3;
+
+---단일형 함수
+select dname, lower(dname),loc,lower(loc)
+from dept;
+---반올림 ,자릿수 표현, 소수점 다 자르기
+select round(44.55),round(44.55,1),trunc(44.55) 
+from dual;
+
+select sal, trunc(sal*0.03) as "TAX"
+from emp;
+
+---문자열 자르기 : 월만 출력
+select ename,hiredate,substr(hiredate,4,2) as 입사월
+from emp;
+
+--사원의 입사월이 12월인 정보 추출
+select ename,hiredate
+from emp
+where substr(hiredate,4,2) like '12';
+
+--+해도 알아서 날짜연산된당
+select sysdate, sysdate+30 from dual;
+---인덱스 1부터 시작 4번째부터 2자리
+select sysdate, substr(sysdate,4,2)from dual;
+--format 변경
+select sysdate, to_char(sysdate,'yy')from dual;
+select sysdate, to_char(sysdate,'yyyy')from dual;
+select sysdate, to_char(sysdate,'day')from dual;
+select sysdate, to_char(sysdate,'mm')from dual;
+select sysdate, to_char(sysdate,'dd')from dual;
+
+--emp에서 사원들의 사원명, 입사월 및 요일 정보 출력, 월별정렬 (오류남 수정)
+select ename, to_char(HIREDATE,'mm')as"입사 월",to_char(HIREDATE,'day') as "요일"
+from EMP
+order by "입사 월";
+
+--날짜형의 다양한 형태
+select sysdate,to_date('2019/12/24') from dual;
+select sysdate,to_date('2019-12-24') from dual;
+select sysdate,to_date('2019 12 24') from dual;
+                        --년월일 순
+select sysdate,to_date('19 12 19') from dual;
+select sysdate,to_date('12/24/19','mm/dd/yy') from dual;
+
+
+--decode 함수 if문
+
+select ename,sal,decode(deptno, 10,sal*1.2, 20,sal*0.7,sal)as "보너스"
+from emp
+order by deptno;
