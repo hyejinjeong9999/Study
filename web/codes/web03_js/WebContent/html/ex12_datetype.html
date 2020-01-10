@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<title>DataType</title>
+</head>
+<body>
+<script type="text/javascript">
+	var num = 10;  //숫자형
+	var str ='자바스크립트';  //문자형
+	var point = { x : 300 , y : 500 }; //객체
+	var arr = [ 1, 2, 3, 4 ];  // 배열
+		
+	//함수
+	var plus = function(su1, su2) {
+		return su1 + su2;
+	}
+	
+/* 	var 함수명 = function(su1, su2) {
+		내용;
+	} */
+
+	function show(){
+		document.write("ksdfsk");
+	}
+	
+	document.writeln('num : ' + num + '<br />');
+	document.writeln('str : ' + str + '<br />');
+	//객체 접근 .(dot) :  객체명.멤버  or  객체명["멤버"]
+	document.writeln('point.x : '  + point.x + '<br />');   // 300
+	document.writeln('point["y"] : '  + point["y"] + '<br />');  // 500
+	// 배열명[인덱스]
+	document.writeln('arr[0] : ' + arr[0] + '<br />');  //1
+	document.writeln('arr[3] : ' + arr[3] + '<br />');  //4
+	
+	document.writeln('plus : ' + plus + '<br />');  // 함수 원형이 텍스트로 출력됨
+	
+	document.writeln('plus(3, 5) : ' + plus(3, 5) + '<br />'); 
+	//제어문자 :  \문자
+	document.writeln("\' ");
+	document.writeln("<br>");
+	document.writeln("\\' ");
+	document.writeln("<br />");
+	document.writeln("br tag 윗줄에 있어요\t 줄바뀌었어요");
+	document.writeln("\n");
+	document.writeln("제어문자 \n 개행 윗줄에\n 있어요 줄바뀌었어요");
+	document.writeln("<br /><br /><br />");
+	document.writeln("\u03c0 ");  // \u숫자  : 숫자에 해당하는 유니코드 문자 출력
+	document.writeln("\uc774\ub3c4\uc5f0 ");
+	document.writeln("<br /><br /><br />");
+	var str = 'sfjsdkjfksdjfkjsdf   rt34535 ,\n 4935893485934rekjtgkjg';  //    \n
+	document.writeln(str);  //  &nbsp;  역할을 한다
+	//alert(str);  
+	//alert("jfkdsfks1 \n dksfkfkf2 \ndkdkdkd38484 3");
+</script>
+</body>
+</html>
+
+
+

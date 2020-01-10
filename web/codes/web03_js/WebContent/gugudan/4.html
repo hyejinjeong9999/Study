@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단</title>
+<style type="text/css">
+	body{
+		text-align: center;
+	}
+	textarea{
+		background-color: floralwhite;
+		text-align: center;
+		font-size: 20px;
+		color: slategray;
+	}
+	.btn{
+		border-radius: 5px;
+		background-color: bisque;
+		color: darkmagenta;
+	}
+</style>
+
+<script type="text/javascript">
+	function dan( intN ){
+		var str="\n";
+		for(i=1; i<10 ; i++ ){
+			str +=  intN+ "*"+ i +" = "+intN * i +"\n" ;
+		}
+		document.getElementById("result").value = str;
+	}
+</script>
+
+</head>
+<body>
+<br>
+<h1><font color="salmon">구구단</font></h1>
+<p>
+	<input type="button" value=" 1 " onclick="dan('1')" class="btn">
+	<input type="button" value=" 2 " onclick="dan('2')" class="btn">
+	<input type="button" value=" 3 " onclick="dan('3')" class="btn">
+	<input type="button" value=" 4 " onclick="dan('4')" class="btn">
+	<input type="button" value=" 5 " onclick="dan('5')" class="btn">
+	<input type="button" value=" 6 " onclick="dan('6')" class="btn">
+	<input type="button" value=" 7 " onclick="dan('7')" class="btn">
+	<input type="button" value=" 8 " onclick="dan('8')" class="btn">
+	<input type="button" value=" 9 " onclick="dan('9')" class="btn">
+</p>
+<article>
+	<textarea cols="30" rows="12"  id="result"></textarea>
+</article>
+</body>
+</html>

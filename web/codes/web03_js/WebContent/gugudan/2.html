@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>구구단</title>
+	<script type="text/javascript">
+		function Gugudan(dan){
+			frm.result.value = "";
+			for(var j=1; j<=9; j++){
+				frm.result.value += dan+"*"+j+"="+(dan*j)+"\n";
+			}
+		}
+		
+		function allclear(){
+			frm.result.value = "";
+		}
+	</script>
+	<style type="text/css">
+		h1{	color: white;	}
+		td{	text-align: center;	}
+		textarea{  text-align: center;	}
+	</style>
+</head>
+<body bgcolor="black">
+<h1 align="center">구구단</h1>
+<form name="frm">
+<table border="1" align="center">
+<tr>
+	<td><input type="button" value="   cls   " onclick="allclear()"> </td>
+	<td><input type="button" value="   2단  " onclick="Gugudan('2')"> </td>
+	<td><input type="button" value="   3단  " onclick="Gugudan('3')"> </td>
+</tr>
+<tr>
+	<td><input type="button" value="   4단   " onclick="Gugudan('4')"> </td>
+	<td><input type="button" value="   5단   " onclick="Gugudan('5')"> </td>
+	<td><input type="button" value="   6단   " onclick="Gugudan('6')"> </td>
+</tr>
+<tr>
+	<td><input type="button" value="   7단   " onclick="Gugudan('7')"> </td>
+	<td><input type="button" value="   8단   " onclick="Gugudan('8')"> </td>
+	<td><input type="button" value="   9단   " onclick="Gugudan('9')"> </td>
+</tr>
+<tr>
+	<td align="center" colspan="3">
+		<textarea rows="11" cols="50" id="result"></textarea>
+	</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

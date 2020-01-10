@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title> ex04_js.html </title>
+<script type="text/javascript">
+	function myNum(){
+		var x = 100;
+		var y = 200;
+		var z = "30";   // string
+		
+		var su = eval("x + y") + "<br>";
+		var result = su + eval("z");
+		
+		document.getElementById("demo").innerHTML = result;
+		
+		var willEval = " ";
+		willEval += 'var number = 10;'  ;
+		willEval += 'alert(number);'  ;
+		
+		eval(willEval);
+		alert( number + 100 );
+		
+		var strNum  = '30';
+		eval(strNum);  // 문자열을 숫자로 변환하는 함수 
+		alert(strNum + number);  // 3010  문자+숫자 
+		alert(eval(strNum) + number);  // 숫자 + 숫자
+	}
+</script>
+</head>
+<body>
+	<button onclick="myNum()">눌러봐</button>
+	<p id="demo"></p>
+</body>
+</html>
+
+
+
