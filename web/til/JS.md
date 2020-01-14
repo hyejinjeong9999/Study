@@ -65,17 +65,52 @@ window.open("ex07_for.html", "새창", "width=100, height=150");
 
 
 
+#### 배열
 
+````javascript
+var fruite = ["apple", "banana","peach"];//선언1
+doument.write(fruits[0]); //apple 호출
+````
 
-#### if문
+````javascript
+var fruite = new array(); //선언 2
+var fruite = new Array ("apple","banana","orange");//선언3
+````
 
 
 
 #### for문
 
+````js
+for(var i=0; i<5; i++){
+    document.write("helloworld!");
+}
+````
+
 
 
 #### while문
+
+````javascript
+var i=0;
+while(i<10){
+    document.write(i+"<br>");
+    i++;
+}
+
+````
+
+````javascript
+var i=0;
+do{
+    document.write(i+"<br>");
+    i++;
+}while(i<10);
+    
+
+````
+
+
 
 
 
@@ -130,34 +165,7 @@ function varshow(){
 
 
 
-#### 이코마 스크립트 기반
 
-````javascript
-
-````
-
-````html
-<body onload = "show()">
-</body>
-````
-
-
-
-````html
-\" : " 출력
-\\ : 역슬러시 출력
-\u+숫자 : 유니코드
-````
-
-
-
-
-
-#### 배열
-
-
-
-#### for문
 
 
 
@@ -369,13 +377,5 @@ window.onload = function(){
 
 
 
-#### 파일 읽어오기 (541p)
 
-````html
-
-````
-
-
-
-#### 웹스토리지 (534p)
 
