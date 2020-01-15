@@ -391,14 +391,19 @@
   ````
 
 * `$(document).ready(function(){`
+  
   * 이벤트를 호출할 준비가 됨
 *  `$("input").focus(function(){`
+  
   * input 셀렉터에 키보드 포커스가 들어오면
 *  `$(this).css("background-color","yellow");`
+  
   * 배경색을 노랑으로 바꾼다
 * `$("input").blur(function(){`
+  
   * input 셀렉터에 키보드 포커스가 사라지면
 * `$(this).css("background-color","white");`
+  
   * 배경색을 흰색으로 바꾼다
 
 > 실행결과
@@ -447,8 +452,10 @@
   ````
 
 * ` $(document).mousemove(function(e){`
+  
   * 마우스가 움직일때 이벤트가 시작된다
 * ` $("#log").text("e.pageX : "+ e.pageX + ", e.pageY : " + e.pageY);`
+  
   * id가 log인 값에 e의 X값과 Y값이 출력되도록 한다
 
 > 실행결과
@@ -598,26 +605,69 @@
     })
     ````
 
+      ````javascript
+      //h1 요소가 나타남
+
+      $( document ).ready( function() {
+              $( 'h1.fi' ).fadeIn( 2000 );
+            } );
+      ````
+
+       ````javascript
+      //2초 후에 h1 요소가 나타나나고 글자가 빨간색으로 변함  
+        $( document ).ready( function() {
+                $( 'h1.fi' ).fadeIn( 2000, function() {
+                  $( this ).css( 'color', 'red' );
+                } );
+              } );
+       ````
+
+
+
+#### custom 태그
+
+* animate
+
   ````javascript
-  //h1 요소가 나타남
+  	<script>
+  		$(function(){
   
-  $( document ).ready( function() {
-          $( 'h1.fi' ).fadeIn( 2000 );
-        } );
+  			$('#btn').click(function(){
+  				$('#first').slideToggle('show')
+  
+  			});
+  
+  			$('span.more').click(function(){
+  
+  				$('#moreRegion').animate({
+  					//json방식으로 입력 var obj = {필드 : 값, 필드, 값의 형식}
+  					
+  					left : "300px", //왼쪽으로 옮기기
+  					opacity : "0.2", //투명도  1에 가까울수록 불투명하다
+  					height : "200px", //높이
+  					width : "200px", //너비
+  
+  					
+  
+  				},'slow');
+  			});
+  			//animate : 커스텀 태그, 
+  		});
+  	</script>
   ````
 
-  
-
-````javascript
-//2초 후에 h1 요소가 나타나나고 글자가 빨간색으로 변함  
-$( document ).ready( function() {
-        $( 'h1.fi' ).fadeIn( 2000, function() {
-          $( this ).css( 'color', 'red' );
-        } );
-      } );
-````
-
-
-
-
+  ````html
+  		
+  </head>
+  <body>
+  <input type="button" id="btn" value="누르면 노란창">
+  	<div id="first" style="display: none;background-color:gold;height: 100px">
+  		First
+  	</div>
+  	<hr>
+  	<span class="more">누르면 투명해져요</span>
+  	<div id="moreRegion" style="background-color: red ;height: 100px;width: 100px;position: absolute;">
+  		첫번째
+  	</div>
+  ````
 
