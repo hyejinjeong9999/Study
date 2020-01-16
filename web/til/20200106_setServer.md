@@ -267,3 +267,17 @@
 
 - window - web browser - chrom
 - 혹은 general - web brawser에서 직접 지정
+
+
+
+
+
+---
+
+## 라이브러리를 못찻는다
+
+1. `C:\Program Files\Java\jdk1.8.0_231\jre\lib\ext`
+   * 톰캣폴더에서 servlet , jsp-api,el-api 파일 넣는다
+2. 혹은 `C:\Program Files\Java\jre1.8.0_231\lib\ext`에서
+   * servlet , jsp-api,el-api 파일 넣는다
+3. 이클립스 - web-inf-lib폴더에 에 직접 넣어본다
