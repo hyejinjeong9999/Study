@@ -1,5 +1,23 @@
 # JSP
 
+* Servlet :  JAVA + HTML
+
+  * 먼저나옴 JAVA 내에 HTML
+  * JAVA, jsp, servlet, : tag sql 문은 문자열 취급한다 => 불편, jsp가 나옴
+  * 유지보수에는 좋음 (수정할 때 서버를 내릴 필요가 없음)
+  * 최신형은 4.0v
+
+* JSP : HTML 안에 JAVA
+
+  * 최신버전은 2.3v
+  * 유지/보수에 어려움 (수정시 서버를 내려야 함)
+
+  
+
+  
+
+  
+
 ## JSP 배경
 
 * 클라이언트 사이드 프로그래밍
@@ -289,38 +307,251 @@
 
 
 
-모델 1방식
+! 변수 밑ㅊ 메소드 선언
 
-반드시 톰켓을 타야함!!!
+<% 변수선언 for while if
 
-jsp  표현방식의 3가지 종류
-
-`<%@%>`
-
-includ  : 현재 내 페이지 내에서 다른 페이지를 가져온다
-
-, page :  
-
-,taglib
-
-지시어를 부를 수 있음
-
-1) 스크립트릿 : <% 자바변수선언, 제어문, 함수못씀 %>
-
-2)선언문
-
- <%! 제어문 못옴, 변수선언, 함수사용 가능>
-
-3) 표현식
-
-<%=변수 또는 값 또는 메소드 %>
+<@ 표현식
 
 
 
-톰켓서버가 해석기
+---
+
+#### 서블릿
 
 
 
-모델 2 방식
+클래스 생성
 
-JSTL
+src : 자바 소스
+
+webContent = css, html, js..
+
+jsp 만드는 방법
+
+class파일로 만들기
+
+servlet 파일로만들기
+
+
+
+1. 클래스로 만들기
+
+
+
+![image-20200117094408824](../../../../혜/til/img/image-20200117094408824.png)
+
+````jsp
+package com.sds.date;
+
+import javax.servlet.http.HttpServlet;
+
+public class ServletTest extends HttpServlet {
+
+}
+
+````
+
+
+
+![image-20200117100923895](../../../../혜/til/img/image-20200117100923895.png)
+
+A : 추상클래스를 의미
+
+![image-20200117101036324](../../../../혜/til/img/image-20200117101036324.png)
+
+
+
+클라이언트가 get 방식이나 post 방식으로 들어와도 접근이 가능하도록 함
+
+#### do post
+
+````jsp
+@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doGet(req, resp);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doPost(req, resp);
+	}
+	
+	
+````
+
+`HttpServletRequest req`  : 요청객체
+
+`HttpServletResponse resp` : 응답 객체
+
+요청(request)객체와 응답(response)객체
+
+`throws ServletException, IOException {`
+
+예외가 올 수 있다 : `serbletException` `IOException`
+
+`super.doGet(reqest, response);`
+
+없을 경우 부모객체를 소환한다
+
+
+
+servletmapping 에서 name에서 클래스를 찾은 후에
+
+servlet의 servletname으로 간다
+
+url pattern 주소줄 표시
+
+servlet class 에 있는 경로대로 가서 창 보여줌
+
+
+
+
+
+#### 어노테이션
+
+@WebServlet
+
+
+
+### 내부 객체
+
+* 선언을 안해도 사용 가능하다
+
+* vrequest, response, out, pageContext, session, application, config, page, exception
+
+* ØJSP 페이지 입출력 관련 기본 객체 
+
+  ØJSP 페이지 외부 환경 정보 제공 기본 객체 
+
+  ØJSP 페이지 서블릿 관련 기본 객체 
+
+  ØJSP 페이지 예외 관련 기본 객체
+
+
+
+서블릿은 수정할때마다 서버 새로 돌려야함
+
+- 서버 리스타트
+
+
+
+2,. 서블릿으로 만들기
+
+![image-20200117112418484](../../../../혜/til/img/image-20200117112418484.png)
+
+
+
+
+
+## 모델 1, 모델 2 (취업 질문) 
+
+![image-20200117164117232](../../../../혜/til/img/image-20200117164117232.png)
+
+#### 모델 1방식
+
+* 뷰와 로직을 모두 JSP 페이지 하나에서 처리하는 구조
+* JSP 내에 로직처리를 위한 자바코드가 출력을 위한 코드와 함께 섞여 삽입
+* JSP 페이지는 자신이 직접 서비스클래스를 이용해서 작업을 처리하고 처리 정보를 클라이언트에 처리
+* 과거에 많이 사용된 아키텍처
+
+#### 모델 1 구성요소
+
+1.  JSP
+2. 자바빈 / 서비스 클래스
+
+#### 특징
+
+* 단순한 구조 - 사용법 쉬움
+
+* 뷰코드 + 자바코드의 혼합 -> 코드의 복잡
+* 백앤드 + 프론트앤드 혼재 
+* 복잡한 코드-> 유지보수의 어려움
+
+![image-20200117164359785](../../../../혜/til/img/image-20200117164359785.png)
+
+#### 모델 2 방식=MVC
+
+* JSP 페이지, 서블릿, 로직을 위한 클래스가 나뉘어 브라우저 요청 처리
+  * 모든 처리를 JSP페이지가 하는 모델 1과 다름!!!
+
+#### 모델2 구성요소
+
+1. 서블릿 : 흐름제어 (controller)
+2. JSP : 요청결과 (view)
+3. 자바빈 / 서비스 클래스 : 요청에 대한 로직처리 ( model)
+
+#### 특징
+
+* 뷰코드 / 자바코드 분리 - 복잡하지 않은 코드
+* 뷰/로직처리에 대한 분업 용이
+* 유지보수 용이
+* 구조가 복잡 - 학습의 어려움
+* JAVA이해 필요
+
+
+
+#### MVC <-> model2
+
+* model2 : MVC패턴을 웹 개발에 도입한 것
+
+* 똑같음
+
+  | MVC 패턴   | 모델2                   | 특징                                                         |
+  | ---------- | ----------------------- | ------------------------------------------------------------ |
+  | MODEL      | 서비스 클래스 / 자바 빈 | 비즈니스 로직을 처리하는 모든것<br /> 컨트롤러부터 처리요청이 들어오면 수행하고 수행결과 반영(글작성, 회원가입, 로그인..)<br />request, session 객체에 저장 |
+  | VIEW       | JSP 페이지              | 클라이언트에 출력되는 화면<br />CONTROLLER에 요청을 보냄<br />로직처리를 위한 코드가 내포되어 있지 않음<br />request,session 객체에 저장된 정보를 토대로 화면 출력<br /> |
+  | CONTROLLER | 서블릿                  | 모든 흐름 제어<br />브라우저로부터 요청이 들어오면 요청분석 후 처리<br /> |
+
+  
+
+
+
+#### 모델 1? 모델 2?
+
+* 모델 2 : 규모가 큰 프로젝트, 업데이트가 빈번한 프로젝트 용
+  * 규모가 작은데 모델2로 하면 작업량만 늘어 날 뿐
+* 모델 1: 규모가 작고 업데이트가 적은 프로젝트 용
+  * 간단한 모델
+
+## JSTL
+
+* JSP Standard Tag Library
+
+* 표준 커스텀 태그
+
+* 많은 JSP어플리케이션을 간단한 태그로 캡슐화 함
+
+* 코드가 복잡한 (java + html 혼용) JSP의 문제를  해결
+
+  * 로직부분의 JSP코드를 태그로 대치시킴 => JSTL
+
+* XML 기반
+
+  * 시작태그와 종료태그의 필요
+
+  
+
+### jstl 설치하기
+
+* https://tomcat.apache.org/download-taglibs.cgi 
+
+  혹은
+
+* https://mvnrepository.com/
+* 에서 ==jstl.jar, standard.jar== 다운받아서 `WEB-INF\lib` 에 붙여넣기
+
+
+
+## 주요 태그
+
+| 라이브러리              | URL                                        | Prefix | ex)                         |
+| ----------------------- | ------------------------------------------ | ------ | --------------------------- |
+| Core                    | **http://java.sun.com/jsp/jstl/core**      | c      | **<****c:tagname** **...>** |
+| XML processing          | **http://java.sun.com/jsp/jstl/xml**       | x      | **<****x:tagname** **...>** |
+| I18N capable formatting | **http://java.sun.com/jsp/jstl/fmt**       | fmt    |                             |
+| Database access(SQL)    | **http://java.sun.com/jsp/jstl/sql**       | sql    |                             |
+| Functions(함수)         | **http://java.sun.com/jsp/jstl/functions** | fn     |                             |
+
