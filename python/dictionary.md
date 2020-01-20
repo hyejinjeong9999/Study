@@ -89,6 +89,32 @@ for a in ages.items():
 
 
 
+#### **Dictionary comprehension**
+
+````python
+{ "{}번".format(number):name for number, name in enumerate(students) } # [ 형식 for문 ]
+{student:score for student, score in zip(students, scores)}
+````
+
+
+
+````python
+students = ["태연", "진우", "정현", "하늘", "성진"]
+{"{}번".format(number):name for number, name in enumerate(students)}
+    # {'2번': '정현', '0번': '태연', '1번': '진우', '4번': '성진', '3번': '하늘'}
+````
+
+
+
+````python
+students = ["태연", "진우", "정현", "하늘", "성진"]
+scores = [85, 92, 78, 90, 100]
+result = {x : y for x, y in zip(students, scores)}
+    # {'성진': 100, '진우': 92, '하늘': 90, '태연': 85, '정현': 7
+````
+
+
+
 
 
 ### LIST와 Dictionary
