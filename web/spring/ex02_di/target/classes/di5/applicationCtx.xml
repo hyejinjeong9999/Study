@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 2. setter method -->
+
+<bean id="soccer" class="di5.PlayerImp">
+
+		<property name="name" value="A" />
+		<property name="position" value="포지션" />
+		<property name="gameName" value="축구" />
+
+	</bean>
+	
+	<bean id="curling" class="di5.PlayerImp">
+
+		<property name="name" value="B" />
+		<property name="position" value="포지션" />
+		<property name="gameName" value="컬링" />
+
+	</bean>
+	
+		<bean id="baseball" class="di5.PlayerImp">
+
+		<property name="name" value="C" />
+		<property name="position" value="포지션" />
+		<property name="gameName" value="야구" />
+
+	</bean>
+	
+			<bean id="basketball" class="di5.PlayerImp">
+
+		<property name="name" value="D" />
+		<property name="position" value="포지션" />
+		<property name="gameName" value="농구" />
+
+	</bean>
+	
+	
+
+	
+
+</beans>

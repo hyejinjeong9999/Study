@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 2. setter method -->
+
+<bean id="record" class="di4.ScoreImp">
+
+		<property name="kor" value="90" />
+		<property name="eng" value="60" />
+		<property name="math" value="96" />
+
+	</bean>
+
+	<bean id="show" class="di4.ScoreShowImp">
+		<property name="record" ref="record"/>
+	</bean>
+
+
+
+
+	<!-- <bean id="score" class="di4.ScoreImp"></bean> 별칭으로 (name) 지정할 수 있다 
+		<bean id="scoreshow" class="di4.ScoreShowImp"> </bean> -->
+
+	<!-- 생성자함수 -->
+
+<!-- 	<bean id="record" class="di4.ScoreImp">
+
+		<constructor-arg name="kor" value="90" />
+		<constructor-arg name="eng" value="80" />
+		<constructor-arg name="math" value="75" />
+
+	</bean>
+
+	<bean id="show" class="di4.ScoreShowImp">
+		<constructor-arg name="record" ref="record"/>
+	</bean>
+ -->
+
+
+</beans>

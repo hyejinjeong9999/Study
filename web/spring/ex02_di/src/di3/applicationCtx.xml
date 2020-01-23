@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- applicationCtx.xml -->
+<bean id = "en" name ="m1,m2" class ="di3.MessageBeanimpEn" ></bean>
+<!-- 별칭으로 (name) 지정할 수 있다 -->
+<bean id = "kr" class="di3.MessageBeanimpKr"> 
+<!-- java : new spring = bean -->
+</bean>
+
+</beans>
