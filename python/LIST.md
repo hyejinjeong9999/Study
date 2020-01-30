@@ -61,25 +61,25 @@ else :
     print(None)
 ````
 
-#### list.index(value)
+##### list.index(value)
 
  value 값을 이용해 위치를 찾음
 
 
 
-#### list.extend([value1,value2])
+##### list.extend([value1,value2])
 
 리스트 뒤에 value 값 추가
 
 
 
-#### list.insert[index, value]
+##### list.insert[index, value]
 
 index 위치에 value 값 추가
 
 
 
-#### list.sort()
+##### list.sort()
 
 list 값을 순서대로 정렬
 
@@ -87,11 +87,37 @@ list 값을 순서대로 정렬
 
 
 
-#### list.reverse()
+##### list.reverse()
 
 list 값을 역순으로 정렬
 
 다른 형태의값이 들어 있으면 정렬 불가능
+
+
+
+##### list.append(값)
+
+* list의 뒤에 값을 추가함
+
+
+
+
+
+#### 2중 리스트 활용
+
+````python
+commands = [[2,5,3],[4,4,1],[1,7,3]]
+for num in commands :
+    num
+    #0 : [2,5,3]
+    #1 : [4,4,1]
+    #2 : [1,7,3]
+    #로 list로 출력됨
+    num[0]
+    #2,4,1 로 하나씩 출력됨
+````
+
+
 
 
 
