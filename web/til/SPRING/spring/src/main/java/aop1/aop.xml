@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<!-- Namespaces에서 aop를 추가한다 -->
+
+
+	<bean id="member" class="aop1.Member" />
+	<bean id="board" class="aop1.Board" />
+	<bean id="common" class="aop1.Common" />
+
+	<aop:config>
+
+		<aop:pointcut expression="execution (public * aop1.*.*(..))" id="pc" />
+		<!-- 메소드 선언 modifier 리턴타입 패키지 클래스명 메소드명 (매개변수) -->
+		<!-- * : 상관없어 * 상관없어 .. 상관없어 -->
+		<!-- aop : pointcut에 들어가 잇음 -->
+		<aop:aspect id="aspect1" ref="common">
+		
+		
+		<!-- 	<aop:before method="a" pointcut-ref="pc" />
+			<aop:after method="b" pointcut-ref="pc" />
+			pointcunt의 id
+		 -->	
+			<aop:around method="c" pointcut-ref = "pc"/> 
+		</aop:aspect>
+		<!-- common클래스를 찾아서 aspect로 만들게 -->
+	</aop:config>
+
+
+
+
+</beans>
