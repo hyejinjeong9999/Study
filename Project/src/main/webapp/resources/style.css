@@ -1,0 +1,286 @@
+@charset "UTF-8";
+/* @font-face { 
+	font-family: 'HangeulNuri-Bold'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/HangeulNuri-Bold.woff') format('woff'); 
+	src: url('<%=request.getContextPath()%>/resources/font/HangeulNuri-Bold.woff') format('woff'); 
+	font-weight: normal; 
+	font-style: normal; 
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Hi+Melody&display=swap&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap&subset=korean');
+
+body {
+	
+	 /* background: #456; */
+  	/* font-family: 'Open Sans', sans-serif; */
+	font-family: 'Do Hyeon','Hi Melody','Open Sans', sans-serif;
+	align-content: center;
+	vertical-align: middle;
+	margin: 0 auto;
+	font-size: x-large;
+}
+
+#sub{
+	position:relative; 
+	left:77%; 
+	
+}
+
+
+		/* main.jsp */
+
+
+
+/*  input {
+    width: 70%;
+    border-radius: 20px;
+    line-height: 50px;
+   		display: block;
+    	margin: auto;
+    	border: 0;
+   		opacity: 0.15;
+} */
+
+input p {
+    color: #fff;
+    opacity: 1;
+    font-size: x-large;
+}
+
+input.submit {
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    opacity: 1;
+    background-color: #1161EE;
+    cursor: pointer;
+    
+} 
+
+a{
+	text-decoration: none;
+}
+
+		/* list */
+table.table2 {
+	border-collapse: separate;
+	border-spacing: 1px;
+	text-align: left;
+	line-height: 1.5;
+	padding-left: 15%;
+	margin-left: 5%;
+	margin-top: 1%;
+	width: 1000px;
+
+}
+
+table.table2 th {
+	padding: 10px;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+}
+
+table.table2 td {
+	/* width: 100px; */
+	padding: 10px;
+	vertical-align: top;
+	border-bottom: 1px solid #ccc;
+	white-space: nowrap;
+}
+
+#tablebottom{
+	margin-top: 10px;
+}
+
+.button {
+	font-family: 'Hi Melody','Open Sans', sans-serif;
+	width: 70px;
+	height: 30px;
+	border-radius: 20px;
+	color: white;
+    opacity: 1;
+    background-color:black;
+    cursor: pointer;
+	border: none;
+}
+
+.button:hover {
+	color: #fff;
+	background-color: #ffa500;
+}
+
+.formsize{
+	position:relative;
+    border-radius: 20px;
+	line-height: 50px;
+	width: 70%;
+	text-align:left;
+	font-size: 20px;
+	padding-left: 25px;
+   	opacity: 0.15;
+    border: 1;
+}
+
+.submitbutton {
+    border-radius: 20px;
+    width: 70%;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    opacity: 1;
+    background-color: #1161EE;
+    cursor: pointer;
+}
+
+ 
+.menu {
+	background-color: DodgerBlue;
+	text-align: center;
+	position: relative;
+	left: 15%;
+	width: 70%;
+	color: white;
+}
+
+#myclass {
+	text-align: center;
+	position: relative;
+	left: 15%;
+	width: 70%;
+	margin: 30px 30px 30px 0px;
+	border: 1px dotted lightblue;
+	padding-bottom: 15px;
+}
+
+#topMenu {
+	position: relative;
+	left: 15%;
+	height: 30px;
+	width: 70%;
+	margin-top: 30px;
+}
+
+#topMenu ul li {
+	width: 25%;
+	list-style: none;
+	float: left;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#topMenu .menuLink {
+	text-decoration: none;
+	color: white;
+	display: block;
+	width: 150px;
+	font-size: 15px;
+	font-weight: bold;
+
+}
+
+#topMenu .menuLink:hover {
+	color: lightblue;
+	background-color: brown;
+}
+
+#welcome {
+	text-align: center;
+}
+
+
+#profile {
+	width: 20%;
+	position: relative;
+	left: 40%;
+	font-size: 15px;
+	font-weight: bold;
+	/* font-family: "고딕체", "Trebuchet MS", Dotum, Arial; */
+	border: 1px solid black;
+	text-align: center;
+}
+
+#profile tr td {
+	border: 1px solid black;
+}
+
+#bottom {
+	background-color: white;
+	color: grey;
+}
+
+#logo {
+	position: relative;
+	left: 15%;
+}
+
+#logoimg{
+	height: 60px;
+	width: 400px;
+}
+
+#menuname {
+	padding-left: 15%;
+	padding-right: 15%;
+	/* padding-bottom: 10px; */
+}
+
+
+#logout {
+	position : relative;
+	left : 45%;
+
+}
+
+#skyblue{
+	position:relative;
+	left : 20%;
+	font-size:0.99em;
+	color: grey;
+}
+
+#insert {
+	/* padding-top: 10px;  */
+	width: 700;
+	border: 0;
+	cellpadding: 2;
+	/* padding-left: 15% */
+}
+
+#barcode {
+	width: 200;
+	position: relative;
+}
+
+
+.menutable{	
+	
+position: relative;
+	left: 20%;
+	width: 60%;
+}
+
+.menutable tr td{
+	text-align:center;
+	width: 50%;
+}
+
+.menuimg {
+	
+	width : 80%;
+ 	height : 250px
+}
+
+#menulist{
+	width : 70%;
+	
+}
+
+
+
+
+
