@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main {
+class MainPrimeNum {
 
     public static boolean isPrimeNum(int num) {
         if(num<2) return false;
@@ -8,6 +8,7 @@ class Main {
             if(num%i==0) return false;
         }
         return true;
+    
 
     }
     public static void main(String[] args) {
@@ -19,6 +20,8 @@ class Main {
 
             if(isPrimeNum(i)) System.out.println(i);
         }
+
+        sc.close();
 
     }
 
