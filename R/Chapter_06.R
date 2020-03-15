@@ -2,6 +2,8 @@
 
 install.packages("ggplot2")
 library(ggplot2)
+install.packages("dplyr")
+library("dplyr")
 
 mpg = as.data.frame(mpg)   # mpg data frame
 
@@ -68,11 +70,22 @@ df <-mutate(mpg,AVG = (cty+hwy)/2) %>%
 # 일곱 종류로 분류한 변수입니다. 어떤 차종의 도시 연비가 높은지 비교하려 합니다. 
 # class별 cty 평균을 구하고 cty 평균이 높은 순으로 정렬해 출력하세요.
 
+df<-group_by(mpg,manufacturer) %>%
+    summarise(avg=mean(cty))%>%
+    arrange(avg)
 
 
 # 7. 어떤 회사 자동차의 hwy(고속도로 연비)가 가장 높은지 알아보려 합니다. 
 # hwy(고속도로 연비) 평균이 가장 높은 회사 세 곳을 출력하세요.
+df <- group_by(mpg,manufacturer) %>% 
+    summarise(avg = mean(hwy)) %>% 
+    head(3)
 
 # 8. 어떤 회사에서 "compact" 차종을 가장 많이 생산하는지 알아보려고 합니다. 
 # 각 회사별 "compact" 차종 수를 내림차순으로 정렬해 출력하세요.
+ df <- filter(mpg,class=="compact") %>% 
+     group_by(manufacturer) %>% 
+      summarise(cnt = n())%>%
+      arrange(desc(cnt))
 
+        
