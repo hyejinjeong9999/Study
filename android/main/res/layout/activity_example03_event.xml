@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--이미지를 보여줌-->
+
+    <!--wrap_content딱 이미지 크기만큼-->
+    <!--adjustViewBounds : ?????????-->
+    <!--scaleType 이미지 가운데 정렬-->
+    <!--src 확장자표시 안됨 : cat.jpg = cat.png  : 이름이 항상 달라야함-->
+    <!--id : 코드 처리를 위한 아이디-->
+
+    <ImageView
+
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cat1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="이미지 변경!!"
+        android:id="@+id/imageChangeBtn"
+        />
+
+<!--    <ToggleButton-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/cat1"-->
+<!--        android:id="@+id/imageChangeBtn"-->
+<!--        android:textOn=""-->
+<!--        android:textOff=""-->
+<!--        >-->
+
+
+<!--    </ToggleButton>-->
+
+
+
+
+</LinearLayout>
