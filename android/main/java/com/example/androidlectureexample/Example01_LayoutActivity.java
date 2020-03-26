@@ -9,7 +9,6 @@ public class Example01_LayoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_example01_layout);
     }
 }

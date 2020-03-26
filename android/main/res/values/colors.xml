@@ -3,7 +3,10 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="colorYellow">#DDD372</color>
-    <color name="colorPurple">#9C98FD</color>
-    <color name="colorRed">#D554EC</color>
+    <color name="colorYellow">#CDDC39</color>
+    <color name="colorBlue">#329DF3</color>
+    <color name="colorRed">#E91E63</color>
+    <color name="colorGreen">#009688</color>
+    <color name="colorSkyBlue">#91E9F4</color>
+    <color name="colorPink">#DC39D9</color>
 </resources>

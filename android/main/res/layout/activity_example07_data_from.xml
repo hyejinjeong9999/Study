@@ -4,16 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30pt"
-        android:textColor="@color/colorPrimaryDark"
-        android:background="@color/colorYellow"
-        android:id="@+id/msgTv" />
+        android:id="@+id/mySpinner" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Activity 종료!!"
-        android:id="@+id/closeBtn" />
+        android:text="이전 Activity로 데이터 전송"
+        android:id="@+id/sendDataBtn"/>
+
 </LinearLayout>

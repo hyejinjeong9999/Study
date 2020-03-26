@@ -17,13 +17,10 @@ public class Example04_TouchEventActivity extends AppCompatActivity {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        //
-        Toast.makeText(this,"소리없는 아우성",Toast.LENGTH_SHORT).show();
-        Log.i("mytest","터치터치");
-
+        // Toast message를 이용해보아요!!
+        Toast.makeText(this,"소리없는 아우성!!",
+                Toast.LENGTH_SHORT).show();
+        Log.i("MYTEST","터치터치!!");
         return super.onTouchEvent(event);
-
-
-
     }
 }

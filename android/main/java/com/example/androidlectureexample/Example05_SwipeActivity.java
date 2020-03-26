@@ -2,6 +2,7 @@ package com.example.androidlectureexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -9,17 +10,16 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class Example05_SwipeActivity extends AppCompatActivity {
-    double x1, x2;
 
+    double x1,x2;
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_example05_swipe);
 
-        LinearLayout ll = (LinearLayout) findViewById(R.id.myLinearLayout);
-        ll.setOnTouchListener(new View.OnTouchListener() { //익명내부 클래스
-
+        LinearLayout ll = (LinearLayout)findViewById(R.id.myLinearlayout);
+        ll.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -41,11 +41,6 @@ public class Example05_SwipeActivity extends AppCompatActivity {
                 return true;
             }
         });
-        //버튼 : setOnClickListner
-        //터치 : setOntouchListener
-        //키보드 : setOnKeyListener
 
     }
-
-
 }
