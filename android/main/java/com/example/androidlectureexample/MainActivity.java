@@ -214,10 +214,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button _14_ImpliciIntentBtn = (Button)findViewById(R.id._14_ImpliciIntentBtn);
-        _14_ImpliciIntentBtn.setOnClickListener(new View.OnClickListener() {
+        Button _14_ImplicitIntentBtn = (Button)findViewById(R.id._14_ImplicitIntentBtn);
+        _14_ImplicitIntentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Explicit Intent(명시적 인텐트)
                 Intent i = new Intent();
                 ComponentName cname = new ComponentName("com.example.androidlectureexample",
                         "com.example.androidlectureexample.Example14_ImplicitIntentActivity");
@@ -226,8 +227,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button _15_ServiceLifeCycleBtn = (Button)findViewById(R.id._15_ServiceLifeCycleBtn);
-        _15_ServiceLifeCycleBtn.setOnClickListener(new View.OnClickListener() {
+        /*
+        App이 실행되었다고 해서 항상 Activity가 보이는건 아니예요. 대표적인 경우
+        카톡, 멜론...
+        Service는 화면이 없는 Activity라고 생각하시면 되요!
+        Activity는 onCreate() -> onStart() -> onResume() -> onPause -> onStop()
+        Service는 onCreate() -> onStartCommand() -> onDestroy()
+        눈에 보이지 않기 때문에 background에서 로직처리하는데 많이 이용.
+         */
+
+        Button _15_ServiceLifecycleBtn = (Button)findViewById(R.id._15_ServiceLifecycleBtn);
+        _15_ServiceLifecycleBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent();
@@ -237,7 +247,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
 
         Button _16_ActivityServiceDataBtn = (Button)findViewById(R.id._16_ActivityServiceDataBtn);
         _16_ActivityServiceDataBtn.setOnClickListener(new View.OnClickListener() {
@@ -257,11 +266,52 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent();
                 ComponentName cname = new ComponentName("com.example.androidlectureexample",
-                        "com.example.androidlectureexample.Example17_KAKAOBookSerachActivity");
+                        "com.example.androidlectureexample.Example17_KAKAOBookSearchActivity");
                 i.setComponent(cname);
                 startActivity(i);
             }
         });
+
+        Button _18_BRTestBtn = (Button)findViewById(R.id._18_BRTestBtn);
+        _18_BRTestBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidlectureexample",
+                        "com.example.androidlectureexample.Example18_BRTestActivity");
+                i.setComponent(cname);
+                startActivity(i);
+            }
+        });
+
+        Button _19_BRSMSBtn = (Button)findViewById(R.id._19_BRSMSBtn);
+        _19_BRSMSBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidlectureexample",
+                        "com.example.androidlectureexample.Example19_BRSMSActivity");
+                i.setComponent(cname);
+                startActivity(i);
+            }
+        });
+
+        Button _20_BRNotiBtn = (Button)findViewById(R.id._20_BRNotiBtn);
+        _20_BRNotiBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidlectureexample",
+                        "com.example.androidlectureexample.Example20_BRNotiActivity");
+                i.setComponent(cname);
+                startActivity(i);
+            }
+        });
+
+
+
+
+
 
 
 

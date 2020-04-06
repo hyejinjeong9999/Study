@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
@@ -13,17 +14,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Example17Sub_KAKAOBookSearchActivity"></activity>
+        <activity android:name=".Example20_BRNotiActivity"></activity>
+
+        <receiver
+            android:name=".Example19Sub_SMSBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Example19_BRSMSActivity" />
+        <activity android:name=".Example18_BRTestActivity" />
 
         <service
-            android:name=".Example17_Service"
+            android:name=".Example17Sub_KAKAOBookSearchService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".Example17_KAKAOBookSerachActivity" />
+        <activity android:name=".Example17_KAKAOBookSearchActivity" />
 
         <service
-            android:name=".Example16_Service"
+            android:name=".Example16Sub_Service"
             android:enabled="true"
             android:exported="true" />
 
@@ -44,7 +57,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Example14_ImplicitIntentActivity" />
-        <activity android:name=".Example13_DetailBookResult" />
         <activity android:name=".Example13_DetailBookSearchActivity" />
         <activity android:name=".Example12_SimpleBookSearchActivity" />
         <activity android:name=".Example11_CounterLogHandlerActivity" />

@@ -4,8 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.ComponentName;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -71,33 +69,16 @@ public class Example13_DetailBookSearchActivity extends AppCompatActivity {
                                 android.R.layout.simple_list_item_1,
                                 titles);
                 detailSearchList.setAdapter(adapter);
+
                 detailSearchList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Log.i("BookSearch","선택한 위치는 : " + position);
+                        Log.i("BookSearch","선택한 책 제목 : " + bookList[position].getBtitle());
+                        Log.i("BookSearch","선택한 책 ISBN : " + bookList[position].getBisbn());
 
-
-                        //수정코드
-                       String isbn = bookList[position].getBisbn();
-
-                        Intent i = new Intent();
-                        /*i.putExtra("ResultValue",isbn);
-                        setResult(7000,i);*/
-                        ComponentName cname = new ComponentName("com.example.androidlectureexample",
-                                "com.example.androidlectureexample.Example13_DetailBookResult");
-
-                        i.putExtra("isbn",isbn);
-                        i.setComponent(cname);
-                        startActivity(i);
-                        //추가코드 끝
-
-
-                        Log.i("myitem", "선택한 위치는 : " + position);
-                        Log.i("myitem", bookList[position].getBisbn());
-                        Log.i("myitem", bookList[position].getBtitle());
                     }
-                    });
-
-
+                });
             }
         };
 
@@ -130,7 +111,7 @@ class MyBookInfoRunnable implements Runnable {
     public void run() {
         // Thread가 시작되면 수행하는 작업을 여기에 작성!!
         // Web application을 호출해서 JSON결과를 가져와서 Activity에게 전달
-        String url = "http://70.12.60.99:8080/bookSearch/bookinfo?keyword=" + keyword;
+        String url = "http://70.12.60.90:8080/bookSearch/bookinfo?keyword=java";
 
         try {
             // 3. URL 객체를 생성해야 해요!! ( Java의 URL class를 이용해서 )

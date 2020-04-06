@@ -15,6 +15,8 @@ public class Example14Sub_ImplicitIntentActivity extends AppCompatActivity {
 
         Intent i = getIntent();
         Toast.makeText(getApplicationContext(),
-                i.getExtras().getString("SEND DATA"),Toast.LENGTH_SHORT).show();
+                i.getExtras().getString("SEND DATA"),
+                Toast.LENGTH_SHORT).show();
+
     }
 }

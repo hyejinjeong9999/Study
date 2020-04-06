@@ -96,14 +96,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="14.Implecit Intent를 이용한 Activity"
-            android:id="@+id/_14_ImpliciIntentBtn" />
+            android:text="14.Implicit Intent를 이용한 Activity"
+            android:id="@+id/_14_ImplicitIntentBtn" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="15.Service Lifecycle"
-            android:id="@+id/_15_ServiceLifeCycleBtn" />
+            android:id="@+id/_15_ServiceLifecycleBtn" />
 
         <Button
             android:layout_width="match_parent"
@@ -116,6 +116,24 @@
             android:layout_height="wrap_content"
             android:text="17.KAKAO 도서 검색"
             android:id="@+id/_17_KAKAOBookSearchBtn" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="18.Broadcast Receiver 실습"
+            android:id="@+id/_18_BRTestBtn" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="19.SMS를 받기위한 Broadcast Receiver"
+            android:id="@+id/_19_BRSMSBtn" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20.Broadcast Receiver를 이용한 알림"
+            android:id="@+id/_20_BRNotiBtn" />
 
     </LinearLayout>
 </ScrollView>
