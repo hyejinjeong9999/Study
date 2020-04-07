@@ -309,6 +309,46 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        Button _21_SQLiteBasicBtn = (Button)findViewById(R.id._21_SQLiteBasicBtn);
+        _21_SQLiteBasicBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidlectureexample",
+                        "com.example.androidlectureexample.Example21_SQLiteBasicActivity");
+                i.setComponent(cname);
+                startActivity(i);
+            }
+        });
+
+        Button _22_SQLiteHelperBtn = (Button)findViewById(R.id._22_SQLiteHelperBtn);
+        _22_SQLiteHelperBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidlectureexample",
+                        "com.example.androidlectureexample.Example22_SQLiteHelperActivity");
+                i.setComponent(cname);
+                startActivity(i);
+            }
+        });
+
+        Button _23_CPExamBtn = (Button)findViewById(R.id._23_CPExamBtn);
+        _23_CPExamBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent();
+                ComponentName cname = new ComponentName("com.example.androidlectureexample",
+                        "com.example.androidlectureexample.Example23_CPExamActivity");
+                i.setComponent(cname);
+                startActivity(i);
+            }
+        });
+
+
+
+
+
 
 
 
