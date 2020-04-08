@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 /*
 *   Content Provider(내용제공자) App에서 관리하는 데이터(SQLite Database)를
@@ -82,6 +84,42 @@ public class Example23_CPExamActivity extends AppCompatActivity {
 
                 getContentResolver().insert(uri,values);
                 Log.i("DBTest","데이터가 입력되었어요!!");
+            }
+        });
+
+        final TextView _23_resultTv = findViewById(R.id._23_resultTv);
+
+        Button _23_empSelectBtn = findViewById(R.id._23_empSelectBtn);
+        _23_empSelectBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("DBTest","Select 클릭!!");
+                // 1. DB처리 기능을 제공하는 Content Provider를 찾아야 해요!
+                //    Content Provider를 찾기 위한 URI가 있어야 해요
+                String uriString = "content://com.exam.person.provider/person";
+                Uri uri = new Uri.Builder().build().parse(uriString);
+                // 2. Uri를 이용해서 Content Provider를 찾아서 특정 method를 호출
+                // column을 표현하기 위한 String[]을 생성해요!
+                // "select name, age, mobile from person"
+                String[] columns = new String[]{"name", "age", "mobile"};
+                //
+                Cursor cursor = getContentResolver().query(
+                        uri,columns,null,null,
+                        "name ASC");
+                // 성공하면 Database table에서 결과 record의 집합을 가져와요!!
+                while(cursor.moveToNext()) {
+                    String name = cursor.getString(0);
+                    int age = cursor.getInt(1);
+                    String mobile = cursor.getString(2);
+
+                    String result = "record => " + name + ", " + age +
+                            ", " + mobile;
+
+                    _23_resultTv.append(result + "\n");
+
+                }
+
+
             }
         });
     }
