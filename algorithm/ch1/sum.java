@@ -1,3 +1,4 @@
+package ch1;
 import java.util.*;
 
 class sum {
