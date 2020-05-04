@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<!-- Namespaces에서 aop를 추가한다 -->
+
+
+	<!-- annotation위해 주석  bean 대신에 class에 @component를 작성하면 된다-->
+	<!-- <bean id="member" class="aop1.Member" /> 
+	<bean id="board" class="aop1.Board"/> 
+	<bean id="common" class="aop1.Common" /> -->
+		<!-- <aop:config>
+		<aop:pointcut
+			expression="execution(java.util.ArrayList aop1.*.*(..))" id="pc" />
+		<aop:aspect id="aspect1" ref="common">
+			<aop:around method="c" pointcut-ref="pc" />
+		</aop:aspect>
+	</aop:config>
+ -->
+	
+	
+		
+	<!-- namespaces에서 context를 추가한 후 context생성 -->
+	<!-- aop1패키지에 있는 어노테이션들을 인식해서 스캔!  autowired, service, repository, component DI 어노테이션-->
+	<!-- di어노테이션 설정ㅁ -->	
+	<context:component-scan base-package="annotation.aop1"></context:component-scan>	
+<!-- 	@Aspect @Pointcut @Around, Before, After AOP 어노테이션-->
+<!-- aop어노테이션 설정 -->
+<aop:aspectj-autoproxy></aop:aspectj-autoproxy> 
+
+
+
+
+
+</beans>
