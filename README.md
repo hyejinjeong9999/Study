@@ -7,19 +7,45 @@
 
 * [124 나라의 숫자](https://www.notion.so/zzhyejin/124-a01148ffa9ac4e5688f8708cf973ccb2)
 * [가장 큰 수](https://www.notion.so/zzhyejin/7a480e29b20f4df1bd6f9387533a0eb1)
-* 순열
-  * 
+
+## 자료구조와 함께 배우는 알고리즘 입문 (java)
+
+* 도서 정리
+  * [Notion 목차](https://www.notion.so/zzhyejin/d4773de89fec4b2ab8cfc163c451e9c0)
+    1. 기본 알고리즘
+    2. 기본 자료구조
+    3. 검색
+    4. 스택과 큐
+    5. 재귀 알고리즘
+    6. 정렬
+    7. 집합
+    8. 문자열 검색
+    9. 리스트
+    10. 트리
+    11. 해시
+* [소스코드]([https://github.com/hyejinjeong9999/Study/tree/master/algorithm/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0](https://github.com/hyejinjeong9999/Study/tree/master/algorithm/자료구조))
 
 # 빅데이터
 
-1. [리눅스 요약](https://github.com/hyejinjeong9999/Study/tree/master/bigdata/linux)
-2. [빅데이터란](https://www.notion.so/zzhyejin/8983c28ce97d423289e77fc1e483f5ce)
-3. [HADOOP 설치](https://www.notion.so/zzhyejin/HADOOP-4769459bd1b54c298558d621acccee27)
-4. [HADOOP 실행](https://www.notion.so/zzhyejin/HADOOP-221f4e8d749648e6a1f7ccb53de70269)
-5. [CAN통신](https://www.notion.so/zzhyejin/CAN-ba5af1f541c6485d842791c33c47a0ef)
+1. R
+   * [소스코드](https://github.com/hyejinjeong9999/Study/tree/master/R)
+
+2. [리눅스 요약](https://github.com/hyejinjeong9999/Study/tree/master/bigdata/linux)
+
+3. [빅데이터란](https://www.notion.so/zzhyejin/8983c28ce97d423289e77fc1e483f5ce)
+
+4. [HADOOP 설치](https://www.notion.so/zzhyejin/HADOOP-4769459bd1b54c298558d621acccee27)
+
+5. [HADOOP 실행](https://www.notion.so/zzhyejin/HADOOP-221f4e8d749648e6a1f7ccb53de70269)
+
+6. [CAN통신](https://www.notion.so/zzhyejin/CAN-ba5af1f541c6485d842791c33c47a0ef)
    * [소스코드](https://github.com/hyejinjeong9999/Study/tree/master/bigdata/can/src/can)
 
 
+
+# Android
+
+* [소스코드](https://github.com/hyejinjeong9999/Study/tree/master/android)
 
 # PYTHON
 
