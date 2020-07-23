@@ -2,7 +2,7 @@
 //https://programmers.co.kr/learn/courses/30/lessons/42588
 class Top {
     public static int[] topSolution(int[] heights) {
-        int index = 0;
+        int index = heights.length-1;
         int[] answer = new int[heights.length];
         // 54321 순으로 내려가기
         // 5랑 4랑 비교해서 4가 더 값이 크면 answer에 추가
@@ -13,12 +13,12 @@ class Top {
             System.out.println("heights["+j+"] : " + heights[j]);
                 if(heights[i]>heights[j]) continue;
                 else{
-                    answer[index] = heights[j];
+                    answer[index] = j;
                 }
 
             }
             
-            index++;
+            index--;
         
         }
 
