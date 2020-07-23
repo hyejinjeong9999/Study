@@ -1,12 +1,24 @@
 # JAVA
 
 * [Compareble과 Coimparator](https://www.notion.so/zzhyejin/Comparable-Comparator-e13ff17d4aa640e9b16ba42350179655)
-* 
+
+  
 
 # 알고리즘 / 자료구조
 
-* [124 나라의 숫자](https://www.notion.so/zzhyejin/124-a01148ffa9ac4e5688f8708cf973ccb2)
-* [가장 큰 수](https://www.notion.so/zzhyejin/7a480e29b20f4df1bd6f9387533a0eb1)
+* [Notion 목차](https://www.notion.so/zzhyejin/5c39c2a992a041798d44f562cf7ff865)
+  * 이론 : 순열
+  * 이론 : 비트연산
+  * 이론 :  재귀함수
+  * 테트로미노
+  * 1,2,3 더하기
+  * 다음 순열
+  * 이전 순열
+  * 모든 순열
+  * 차이를 최대로
+  * 부분집합의 합
+  * 124 나라의 숫자
+  * 가장 큰 수
 
 ## 자료구조와 함께 배우는 알고리즘 입문 (java)
 
@@ -28,6 +40,20 @@
 # 빅데이터
 
 1. R
+
+   * [Notion 목차](https://www.notion.so/zzhyejin/R-50f01d2cec244248b74f76e0b870a694)
+     * R의 기초
+     * 자료구조, 문자열 처리
+     * 연습문제
+     * 문자처리
+     * JSON을 이용한 도서검색 프로그램
+     * 영화 진흥원을 이용해 분석하기
+     * Crawling, Scraping
+     * 웹 전송 방식
+     * 데이터 조작, 문제풀이
+     * 데이터 정제
+     * 데이터를 분석해 이용하기
+
    * [소스코드](https://github.com/hyejinjeong9999/Study/tree/master/R)
 
 2. [리눅스 요약](https://github.com/hyejinjeong9999/Study/tree/master/bigdata/linux)
@@ -39,13 +65,40 @@
 5. [HADOOP 실행](https://www.notion.so/zzhyejin/HADOOP-221f4e8d749648e6a1f7ccb53de70269)
 
 6. [CAN통신](https://www.notion.so/zzhyejin/CAN-ba5af1f541c6485d842791c33c47a0ef)
+
    * [소스코드](https://github.com/hyejinjeong9999/Study/tree/master/bigdata/can/src/can)
 
 
 
 # Android
 
+* [Notion 목차](https://www.notion.so/zzhyejin/419e8dfa3b354fc595149ef3f8c933f2)
+
+  * 안드로이드 개념, 설치
+  * LayOut
+  * 통합 앱만들어보기
+  * 사진 이용하기
+  * Touch Event
+  * 메시지 전달
+  * 메시지 전달을 받기
+  * android:scaleType 옵션값 설정
+  * Thread
+  * ANR 발생과 해결해보기
+  * Thread와 Progressbar
+  * Handler
+  * 네트워크 통신
+  * 도서검색 webApplication 제작
+  * Implicit Intent를 이용한 Activity
+  * Service의 lifecycle
+  * 카카오 API를 이용해 APP 만들기
+  * Broadcast Receiver
+  * 데이터 베이스
+  * SQLiteHelper
+  * Content Provider
+
 * [소스코드](https://github.com/hyejinjeong9999/Study/tree/master/android)
+
+  
 
 # PYTHON
 
