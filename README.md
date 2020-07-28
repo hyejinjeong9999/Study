@@ -35,7 +35,7 @@
     9. 리스트
     10. 트리
     11. 해시
-* [소스코드]([https://github.com/hyejinjeong9999/Study/tree/master/algorithm/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0](https://github.com/hyejinjeong9999/Study/tree/master/algorithm/자료구조))
+* [소스코드]([https://github.com/hyejinjeong9999/Study/tree/master/algorithm/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%ED%95%A8%EA%BB%98%EB%B0%B0%EC%9A%B0%EB%8A%94%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%EC%9E%85%EB%AC%B8/bookStudy/src](https://github.com/hyejinjeong9999/Study/tree/master/algorithm/자료구조와함께배우는알고리즘입문/bookStudy/src))
 
 # 빅데이터
 
@@ -115,4 +115,16 @@
 11. [Inheritance](https://github.com/hyejinjeong9999/Study/blob/master/python/Inheritance.md)
 
 * [기타소스코드](https://github.com/hyejinjeong9999/Study/tree/master/python)
+
+
+
+#  GIT
+
+1. [git 기초](https://github.com/hyejinjeong9999/Study/blob/master/git/git.md)
+2. [git commit]([https://github.com/hyejinjeong9999/Study/blob/master/git/how%20to%20commit.md](https://github.com/hyejinjeong9999/Study/blob/master/git/how to commit.md))
+3. [git ignore](https://github.com/hyejinjeong9999/Study/blob/master/git/gitignore.md)
+4. [git clone](https://github.com/hyejinjeong9999/Study/blob/master/git/clone.md)
+5. [git status & undoing]([https://github.com/hyejinjeong9999/Study/blob/master/git/git%20status%26%20undoing.md](https://github.com/hyejinjeong9999/Study/blob/master/git/git status%26 undoing.md))
+6. [git branch scenario]([https://github.com/hyejinjeong9999/Study/blob/master/git/branch%20scenario.md](https://github.com/hyejinjeong9999/Study/blob/master/git/branch scenario.md))
+7. [gitBlog](https://github.com/hyejinjeong9999/Study/blob/master/git/blog.md)
 
