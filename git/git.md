@@ -145,11 +145,3 @@ $ git push origin master
 
 
 
-# 삭제 / 폴더명 수정
-
-`git add -u`
-
-`git commit -a`
-
-
-
