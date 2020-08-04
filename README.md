@@ -127,4 +127,5 @@
 5. [git status & undoing]([https://github.com/hyejinjeong9999/Study/blob/master/git/git%20status%26%20undoing.md](https://github.com/hyejinjeong9999/Study/blob/master/git/git status%26 undoing.md))
 6. [git branch scenario]([https://github.com/hyejinjeong9999/Study/blob/master/git/branch%20scenario.md](https://github.com/hyejinjeong9999/Study/blob/master/git/branch scenario.md))
 7. [gitBlog](https://github.com/hyejinjeong9999/Study/blob/master/git/blog.md)
+8. [git추가정보]([https://github.com/hyejinjeong9999/Study/blob/master/git/git%20%EC%B6%94%EA%B0%80%EC%A0%95%EB%B3%B4.md](https://github.com/hyejinjeong9999/Study/blob/master/git/git 추가정보.md))
 
